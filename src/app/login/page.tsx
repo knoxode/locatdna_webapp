@@ -1,7 +1,8 @@
-import { LoginButtonEmail, LoginButtonGithub, LoginButtonGoogle } from "@/src/app/ui/login/button";
+import { LoginButton } from "@/src/app/ui/login/button";
 // import { Mail } from "lucide-react";
 
 export default function LoginPage() {
+  const mode = "login";
   return (
     <div className="min-h-screen flex items-center justify-center bg-black text-zinc-200">
       <div className="w-full max-w-6xl border border-zinc-800 rounded-xl p-12">
@@ -26,13 +27,13 @@ export default function LoginPage() {
           <div className="space-y-4 max-w-md w-full">
 
             {/* OAuth Buttons */}
-            <LoginButtonGoogle />
+            <LoginButton mode={mode} provider="google" />
+            <LoginButton mode={mode} provider="github" />
 
-            <LoginButtonGithub />
             {/* Divider */}
             <div className="border-t border-zinc-800 my-4" />
 
-            <LoginButtonEmail />
+            <LoginButton mode={mode} provider="email" />
 
           </div>
 
