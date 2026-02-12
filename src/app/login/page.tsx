@@ -1,11 +1,11 @@
-import { LoginButton } from "@/src/app/ui/login/button";
+import { LoginButton } from "@/app/ui/login/button";
 // import { Mail } from "lucide-react";
 
 export default function LoginPage() {
   const mode = "login";
   return (
     <div className="min-h-screen flex items-center justify-center bg-black text-zinc-200">
-      <div className="w-full max-w-6xl border border-zinc-800 rounded-xl p-12">
+      <div className="w-full max-w-7xl border border-zinc-800 rounded-xl p-12">
         <div className="grid grid-cols-[1fr_auto_1fr] gap-16 items-center">
 
           {/* LEFT SIDE */}
@@ -15,9 +15,9 @@ export default function LoginPage() {
             </h1>
             <p className="text-lg text-zinc-400">
               Don&apos;t have an account?{" "}
-              <span className="underline cursor-pointer hover:text-zinc-300">
+              <a href="/signup" className="underline cursor-pointer hover:text-zinc-300">
                 Sign up
-              </span>
+              </a>
             </p>
           </div>
 
